@@ -1,0 +1,188 @@
+<!-- 
+    Test goal: hide the scrollbar
+    Result: fail
+ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <style>
+        html {
+            /* value somewhere over 13000 resets the scrollbar (max page height reached?) */
+            /* values higher than 100 somehow sets the viewport width higher o.O (zooms out) */
+            /* width: 200%; */
+
+            /* this is required for the below to work */
+            overflow: hidden;
+        }
+
+        body {
+            /* specific height is required */
+            height: 1231px;
+
+            /* for content width: 104% */
+            /* height: 1278px; */
+            /* behavior changes at 1279px: scrollbar stays, depending on .content width  */
+
+            /* works with content width UNSPECIFIED */
+            /* It only works with this 103% value or higher, not with px values */
+            /* only after first scroll */
+            /* also good: no horizontal scroll is actually allowed/possible */
+            /* builds in a padding on the right */
+            /* width: 103%; */
+            /* The actual reported viewport width is 1072px */
+
+            /* Both scroll and hidden work */
+            /* hidden works better, as it really seems to kill the bar,
+                but only if the height _on the content_ is set */
+            overflow: scroll;
+            /* overflow: hidden; */
+
+
+            /* this affects the values */
+            /* margin: 0; */
+
+            /* Magic value that lets the full screen be used */
+            /* ...but seems to depend on content padding */
+            height: 1260px;
+
+        }
+
+        .content {
+
+            /* To use the full screen w */
+            /* width: 104%; */
+            /* width: 101%; */
+
+            /* height: 1231px; */
+
+            /* This is the max before the scrollbar reappears */
+            height: 1289px;
+
+            /* requires this to be scrollable, 
+            will show the bar only before the first scroll action */
+            overflow: scroll;
+
+        }
+
+        .content {
+            font-size: 40px;
+            /* padding here influences the appearance of the bar */
+            /* padding: 2rem; */
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- killer: this doesn't work other elems than text nodes in the div -->
+    <div class="content">
+        <p>
+            Ex quis pariatur et cillum deserunt laboris exercitation. Adipisicing laborum ipsum reprehenderit commodo
+            ullamco
+            fugiat tempor dolore culpa cillum et occaecat incididunt enim enim. Deserunt ex culpa occaecat ad. Eu anim
+            esse
+            ut
+            ea sunt duis culpa velit id et cillum ullamco irure officia duis.
+        </p>
+        <p>
+            Veniam tempor commodo sint deserunt incididunt nostrud in anim dolore nulla velit mollit consectetur.
+            Incididunt
+            sit
+            esse excepteur nostrud. Incididunt consequat ea commodo. Dolore voluptate elit nostrud reprehenderit sunt eu
+            veniam
+            nisi ipsum do nostrud ut fugiat do. Elit sunt fugiat nisi commodo.
+        </p>
+        Esse tempor ipsum laborum do. Eiusmod sunt deserunt proident deserunt cupidatat ut. Id proident et velit
+        nulla
+        consequat duis magna ut qui laborum id consequat. Ullamco officia minim nostrud ut minim nostrud ad do
+        velit.
+        Incididunt do nulla est occaecat occaecat nisi elit ipsum sunt adipisicing. Quis minim consequat amet eu
+        sint
+        duis
+        laboris aliqua ut aute. Duis incididunt nulla ex culpa.
+
+        Commodo dolor Lorem nostrud reprehenderit minim officia nisi velit amet laboris minim nulla irure elit. Et
+        quis
+        ad
+        officia cillum proident non aliqua proident amet cillum amet nisi. Esse commodo mollit elit eu do. Excepteur
+        cupidatat exercitation irure quis officia ex dolore irure.
+
+        Eu deserunt ullamco excepteur laborum. Quis pariatur id culpa velit nulla consectetur deserunt ullamco duis
+        cupidatat mollit labore tempor. Proident voluptate qui qui cillum in aliqua tempor est sit nisi cupidatat
+        sunt
+        adipisicing ut ea. Exercitation duis velit adipisicing consequat enim eu minim adipisicing dolor nostrud.
+
+        Irure occaecat duis veniam sunt anim mollit excepteur sit id. Nostrud incididunt eiusmod minim ipsum non.
+        Sint
+        elit
+        labore cillum qui dolor non magna cupidatat. Quis incididunt esse dolore. Duis nulla ex est. Exercitation
+        tempor
+        aliqua do minim aliquip fugiat sint velit magna culpa sit cillum proident ipsum est. Et tempor irure ea
+        adipisicing
+        culpa enim laborum ea minim mollit dolor ipsum laboris ex. Amet dolore elit esse commodo dolore eiusmod qui
+        amet
+        officia ex.
+
+        Cillum mollit officia quis amet occaecat fugiat nulla nulla sint sunt. Pariatur anim nulla adipisicing ipsum
+        et
+        ea.
+        Dolore minim sit qui sunt cillum fugiat in reprehenderit excepteur ad aliquip. Quis Lorem ipsum commodo ea
+        proident
+        aliqua et sit ipsum ex laborum Lorem enim ut. Dolore labore magna amet eu enim non sunt duis est.
+
+        Deserunt ad eiusmod fugiat est ipsum ut deserunt ipsum ut pariatur excepteur sit amet sint. Dolore commodo
+        Lorem
+        proident pariatur excepteur cupidatat ipsum et ea tempor ad proident eiusmod cupidatat velit. Deserunt minim
+        irure
+        irure nostrud. Dolor sit enim exercitation nisi mollit sunt irure. Qui laborum reprehenderit voluptate elit
+        non
+        mollit incididunt commodo minim sunt velit incididunt est.
+
+        Occaecat esse aliquip quis laborum proident nisi. Qui laboris esse minim dolor et dolor occaecat
+        reprehenderit
+        adipisicing cillum aute nisi. Dolor ipsum est dolore. Tempor cillum dolor aute quis. Cupidatat aliquip quis
+        excepteur et officia excepteur duis. Adipisicing enim cillum culpa dolor nulla cillum eu ea ea. Id voluptate
+        aliqua
+        est aliqua. Cillum laborum nostrud mollit do ad.
+
+        Voluptate eiusmod sint enim consequat nostrud eu Lorem reprehenderit et culpa veniam nostrud deserunt. Ipsum
+        ex
+        eu
+        dolor mollit esse dolore. Fugiat tempor sint amet aliqua aute pariatur elit ex non sint esse in ipsum
+        ullamco
+        proident. Elit ex mollit magna proident. Qui exercitation adipisicing irure incididunt aliqua minim culpa eu
+        tempor
+        exercitation cillum laborum. Incididunt voluptate do et ea et fugiat eiusmod amet laboris ad nisi.
+
+        Voluptate eiusmod sint enim consequat nostrud eu Lorem reprehenderit et culpa veniam nostrud deserunt. Ipsum
+        ex
+        eu
+        dolor mollit esse dolore. Fugiat tempor sint amet aliqua aute pariatur elit ex non sint esse in ipsum
+        ullamco
+        proident. Elit ex mollit magna proident. Qui exercitation adipisicing irure incididunt aliqua minim culpa eu
+        tempor
+        exercitation cillum laborum. Incididunt voluptate do et ea et fugiat eiusmod amet laboris ad nisi.
+
+        Deserunt ad eiusmod fugiat est ipsum ut deserunt ipsum ut pariatur excepteur sit amet sint. Dolore commodo
+        Lorem
+        proident pariatur excepteur cupidatat ipsum et ea tempor ad proident eiusmod cupidatat velit. Deserunt minim
+        irure
+        irure nostrud. Dolor sit enim exercitation nisi mollit sunt irure. Qui laborum reprehenderit voluptate elit
+        non
+        mollit incididunt commodo minim sunt velit incididunt est.
+
+        Occaecat esse aliquip quis laborum proident nisi. Qui laboris esse minim dolor et dolor occaecat
+        reprehenderit
+        adipisicing cillum aute nisi. Dolor ipsum est dolore. Tempor cillum dolor aute quis. Cupidatat aliquip quis
+        excepteur et officia excepteur duis. Adipisicing enim cillum culpa dolor nulla cillum eu ea ea. Id voluptate
+        aliqua
+        est aliqua. Cillum laborum nostrud mollit do ad.
+
+
+    </div>
+    <div class="obscurer"></div>
+</body>
+
+</html>

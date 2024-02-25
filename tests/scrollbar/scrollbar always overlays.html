@@ -1,0 +1,80 @@
+<!--
+    Test: shows that in normal situations, 
+    the scrollbar always overlays page content (can't be obscured by it)
+ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <style>
+        html {
+            /* height: 95% !important; */
+            height: 100% !important;
+            /* height: 95% !important;
+            /* overflow: hidden !important; */
+            overflow-y: hidden !important;
+        }
+
+        /* toggling this between 95% and 100% using !important changes it a bit */
+        /* but only if the html height is on 100%: html height is reported as */
+        body {
+            height: 95% !important;
+            /* height: 1200px !important; */
+            overflow: hidden !important;
+        }
+
+
+        body::-webkit-scrollbar {
+            display: none;
+        }
+
+        body::-webkit-scrollbar {
+            width: 0;
+        }
+
+        /* This shows that the non-hideable scrollbar is overlaying the content somehow */
+        .html,
+        .body {
+            /* height: 100%;
+            width: 100%; */
+            position: relative;
+            z-index: 1;
+        }
+
+        .obscurer {
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 30px;
+            height: 100%;
+            background-color: #aaa;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="obscurer"></div>
+    <script>
+        function print(str) {
+            document.write("<p>" + str + "</p>")
+        }
+        function printStats() {
+            print("window w" + window.innerWidth) // Surprising? gives zero!
+            print("documentElement.clientWidth " + document.documentElement.clientWidth)
+            print("window h" + window.innerHeight)
+            print("documentElement.clientHeight " + document.documentElement.clientHeight)
+        }
+
+        document.open();
+        document.write("<h1>Scrollbar</h1>");
+        // try varying this to vary page content size
+        // that does affect the scrollbar
+        for (var i = 0; i < 3; i++) {
+            printStats()
+        }
+        document.close();
+    </script>
+</body>
+
+</html>

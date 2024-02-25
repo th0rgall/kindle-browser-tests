@@ -1,0 +1,27 @@
+<!-- 
+  Test: check if localStorage is supported 
+  Result: yes, it is!
+ -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=1500, initial-scale=1, user-scalable=no"
+    />
+    <height></height>
+  </head>
+
+  <body>
+    <script>
+      function print(str) {
+        document.write("<p>" + str + "</p>");
+      }
+
+      localStorage.setItem("hello", "world");
+
+      print(localStorage.getItem("hello"));
+    </script>
+  </body>
+</html>

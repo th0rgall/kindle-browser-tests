@@ -1,0 +1,158 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html {
+            height: 100%;
+            /* crucial */
+            /* overflow: hidden; */
+            /* overflow: scroll; */
+        }
+
+        body {
+            /* 1231px - 60px */
+            height: 1171px;
+            /* max-height: 90%; */
+            /* height: 90%; */
+            /* width: 100%; */
+            /* margin is only applied/relevant when body has static content */
+            margin: 0;
+
+            /* important  */
+            overflow: scroll;
+            /* overflow: scroll; */
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 10%;
+        }
+
+        #bg {
+            /* height: 1231px; */
+            /* height: 3000px; */
+            width: 100%;
+            height: 100%;
+            overflow: scroll;
+            /* background: #aaa; */
+
+            /* important */
+            /* overflow: scroll; */
+
+        }
+
+        #sticky {
+
+            position: absolute;
+            top: 1172px;
+            /* top: 0; */
+            height: 60px;
+            width: 100%;
+            background-color: #eee;
+            /* color: white; */
+            font-size: 40px;
+
+        }
+
+        #sticky>p {
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="sticky">
+        <p>some content!</p>
+    </div>
+    <div id="bg">
+        <div>
+            <div>
+                Velit tempor officia cupidatat labore enim id amet id exercitation laboris ullamco incididunt fugiat ut.
+                Id non
+                reprehenderit exercitation nostrud tempor pariatur magna irure velit excepteur ad adipisicing. Deserunt
+                dolor
+                nisi occaecat labore esse occaecat ipsum aliquip culpa voluptate. Fugiat velit exercitation et est non
+                do
+                ullamco reprehenderit fugiat incididunt ad do incididunt amet. Irure sint mollit amet adipisicing
+                laboris
+                adipisicing. Ad incididunt nostrud qui incididunt. Consectetur sunt eu et commodo do sunt voluptate sit
+                culpa
+                anim sit esse ut velit esse.
+
+            </div>
+            Minim mollit ad aliqua mollit. Proident aliqua dolor adipisicing enim fugiat cupidatat magna dolor excepteur
+            in
+            cillum. Ut ex sunt et aliqua cupidatat tempor consectetur consectetur dolore irure dolor voluptate nulla
+            sint.
+            Consequat sit et id ex qui excepteur ex ex velit ad laborum incididunt nisi.
+
+            Eu mollit et tempor ut nostrud eu. Aliquip do id consequat id proident exercitation ad proident officia
+            reprehenderit ex occaecat nulla ad esse. Lorem deserunt id do duis labore fugiat qui ex ipsum incididunt
+            minim
+            ad id nostrud. Commodo aute nostrud eu magna ullamco sunt aliquip adipisicing. Enim do deserunt labore duis.
+
+            Non ad veniam amet mollit eu consequat aliqua excepteur nulla. Nostrud reprehenderit officia tempor id
+            deserunt
+            est amet consectetur excepteur laboris. Do irure do enim occaecat et dolor esse labore dolor. Excepteur
+            reprehenderit nulla eiusmod.
+
+            Est aliqua laborum id sit. Commodo tempor enim cupidatat duis eu magna laborum laborum. Fugiat tempor velit
+            qui
+            sit incididunt do nisi sit enim. Mollit proident reprehenderit eiusmod eiusmod sint laboris ut. Labore
+            incididunt ex tempor esse laborum nisi ex. Sint consectetur anim velit aliquip officia. In dolor fugiat
+            dolor
+            consectetur et dolor proident minim officia veniam aliqua duis reprehenderit aute reprehenderit. Sit commodo
+            eu
+            occaecat.
+
+            Esse enim officia quis non velit nisi do reprehenderit cupidatat aliquip esse quis irure. Cillum ipsum
+            commodo
+            non velit officia. Eiusmod est aliqua eu ex. Eu eiusmod consequat proident minim aute amet sint sunt commodo
+            veniam amet dolore pariatur consectetur consequat. Consectetur consectetur dolor ut incididunt. Velit et
+            velit
+            laboris et consectetur sunt ad. Consequat minim consectetur officia voluptate irure sunt ea esse aute aliqua
+            id
+            elit nostrud.
+
+            Veniam enim exercitation do excepteur irure aute elit adipisicing ipsum. Aliquip est magna deserunt qui
+            laborum
+            id labore reprehenderit enim minim proident ea aliqua. Officia est esse aute fugiat Lorem cillum ipsum
+            proident
+            consectetur tempor voluptate culpa. Cupidatat ipsum qui esse proident aliqua non commodo occaecat excepteur
+            sunt
+            consectetur. Excepteur elit ad fugiat in adipisicing laborum non. Ea fugiat exercitation excepteur cupidatat
+            voluptate elit id id ex aliquip eiusmod sunt. Lorem duis tempor reprehenderit ad. Veniam id adipisicing
+            reprehenderit velit enim incididunt elit nostrud incididunt nulla veniam.
+
+            Consectetur nostrud aliquip irure commodo id qui. Commodo ipsum esse cupidatat sunt. Sunt amet deserunt
+            tempor
+            excepteur dolor et nulla ex. Nulla incididunt ad culpa amet amet minim ut amet aute minim cillum amet sunt
+            culpa
+            velit. Pariatur minim eiusmod officia aute ad cillum aliquip veniam non aliqua. Officia mollit ullamco
+            labore
+            consequat ipsum laboris qui consectetur aliqua ea exercitation ex laboris.
+
+            Deserunt quis aliquip labore voluptate culpa sint non fugiat id ut Lorem do. Dolore minim nisi nostrud elit
+            aliqua eiusmod ex duis do nulla do amet officia. Minim aliqua excepteur non do commodo reprehenderit Lorem
+            ut
+            ipsum ex aliquip irure sunt ipsum. Officia nulla commodo sunt officia cillum cillum cillum deserunt ipsum id
+            enim. Anim deserunt ipsum adipisicing id eu. Non proident pariatur velit ea dolore officia aliquip veniam.
+
+            Duis dolore proident adipisicing sit do cillum do sint deserunt aliqua amet amet anim. Do ut reprehenderit
+            proident consectetur do deserunt in qui ex. Minim laborum Lorem sint nisi adipisicing amet est minim sit
+            deserunt consectetur sunt consequat. Anim nulla officia esse ad sint Lorem proident anim.
+        </div>
+    </div>
+    <script>
+        window.addEventListener('click', () => {
+            document.documentElement.scrollTo = 0;
+            document.body.scrollTop = 0;
+            document.getElementById('bg').scrollTop = 0;
+        })
+    </script>
+</body>
+
+</html>

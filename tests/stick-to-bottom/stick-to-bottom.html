@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html {
+            height: 100%;
+        }
+
+        body {
+            height: 100%;
+            width: 100%;
+            /* margin is only applied/relevant when body has static content */
+            margin: 0;
+        }
+
+        #bg {
+            /* height: 1231px; */
+            height: 3000px;
+            width: 100%;
+            /* background: #aaa; */
+
+        }
+
+        #sticky {
+            height: 60px;
+            width: 100%;
+            background-color: #eee;
+            /* color: white; */
+            font-size: 40px;
+
+            position: fixed;
+            /* this is the offset you need from the bottom to align with the 1231px screen*/
+            /* bottom: 37px; */
+            left: 0px;
+
+            top: 90%;
+        }
+
+        #sticky>p {
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="bg"></div>
+    <div id="sticky">
+        <p>some content!</p>
+    </div>
+</body>
+
+</html>

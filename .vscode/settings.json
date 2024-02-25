@@ -1,0 +1,7 @@
+{
+    // Disable auto HTML formatting
+    "html.format.enable": false,
+    "[html]": {
+        "editor.defaultFormatter": "vscode.html-language-features"
+    }
+}
